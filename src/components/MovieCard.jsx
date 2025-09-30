@@ -8,7 +8,7 @@ export default function MovieCard({ item }) {
   return (
     <>
       <h2>{title}</h2>
-      <img src={IMG(poster_path)} alt={title} />
+      <img src={IMG(item.poster_path)} alt={title} />
     </>
   );
 }
