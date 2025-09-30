@@ -10,7 +10,7 @@ export default function Home() {
   console.log("popular", popular);
   return (
     <>
-      <h1>hello from home</h1>
+      <h1>hello from hom</h1>
       {trending.results.map((item) => (
         <MovieCard key={item.id} item={item} />
       ))}
