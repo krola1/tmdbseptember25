@@ -4,9 +4,14 @@
 
 day1.-----------------------------------------------------------------------------
 
-structure, api-handling, data functions, basic page and component for viewing data
+structure -- ✔️
+api-handling -- ✔️)
+data functions -- ✔️) 
+basic page and component for viewing data
 
-router?
+router --- semi ✔️) 
+
+
 -----------------------------------------------------------------------------
 src
     components/

@@ -6,7 +6,6 @@ import {
   getMovieDetails,
   searchMulti,
 } from "../services/tmdb.js";
-import { use } from "react";
 
 export const useTrending = (mediaType = "movie", trendingWindow = "week") =>
   useQuery({
@@ -16,8 +15,8 @@ export const useTrending = (mediaType = "movie", trendingWindow = "week") =>
 
 export const usePopularMovies = (mediaType = "movie", pageNumber = 1) =>
   useQuery({
-    queryKey: ["popular", mediaType, pageNumber],
-    queryFn: () => getPopular(mediaType, pageNumber),
+    queryKey: ["popular", pageNumber, mediaType],
+    queryFn: () => getPopular(pageNumber, mediaType),
   });
 
 export const useMovieDetails = (movieId) =>

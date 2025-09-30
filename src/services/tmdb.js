@@ -2,10 +2,11 @@ import api from "../lib/axios.js";
 
 /// modular get function that accepts different parameters
 const get = (url, params = {}) => {
-  api
+  return api
     .get(url, { params: { ...api.defaults.params, ...params } })
-    .then((result) => result.data);
+    .then((res) => res.data);
 };
+
 //gets list of trending moviesd, default to mediatype movie and week as time period
 export const getTrending = (mediaType = "movie", trendingWindow = "week") => {
   return get(`/trending/${mediaType}/${trendingWindow}`);
