@@ -1,19 +1,15 @@
-import MovieCard from "../components/MovieCard.jsx";
+import Carousel from "../components/Carousel.jsx";
+
 import { useTrending, usePopularMovies } from "../hooks/useTmdb.js";
 
 export default function Home() {
   const { data: trending } = useTrending("movie", "week");
   const { data: popular, error } = usePopularMovies();
-  console.log(error);
 
-  console.log("trending", trending);
-  console.log("popular", popular);
   return (
     <>
-      <h1>hello from hom</h1>
-      {trending.results.map((item) => (
-        <MovieCard key={item.id} item={item} />
-      ))}
+      <Carousel title="Trending this week" items={trending?.results} />
+      <Carousel title="Popular" items={popular?.results} />
     </>
   );
 }
