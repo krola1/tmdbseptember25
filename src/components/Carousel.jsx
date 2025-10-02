@@ -1,11 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 import MovieCard from "./MovieCard.jsx";
 
 export default function Carousel({ items = [], title }) {
   if (items.length !== 0) {
     return (
-      <section>
-        <h2>{title}</h2>
+      <section className="section">
+        <h2 classname="section-title">{title}</h2>
         <Swiper
           slidesPerView={2}
           spaceBetween={12}

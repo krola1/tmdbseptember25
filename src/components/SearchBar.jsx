@@ -8,7 +8,7 @@ export default function SearchBar() {
   const onSubmit = (e) => {
     e.preventDefault();
     if (!query.trim()) return;
-    navigate(`/?=${encodeURIComponent(query.trim())}`);
+    navigate(`/?q=${encodeURIComponent(query.trim())}`);
   };
 
   return (

@@ -1,5 +1,6 @@
 import App from "../App";
 import Home from "../pages/Home";
+import Movie from "../pages/Movie";
 
 const routes = [
   {
@@ -10,6 +11,7 @@ const routes = [
         index: true,
         element: <Home />,
       },
+      { path: "movie/:id", element: <Movie /> },
     ],
   },
 ];
